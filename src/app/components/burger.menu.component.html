@@ -1,0 +1,18 @@
+<h2 align="center">BURGER MENU</h2>
+<div class="row">
+  <div class="card col-lg-4 col-sm-6 col-xs-12" *ngFor="let burger of burgers; index as burgerIndex;">
+    <div class="card-block">
+      <h4 class="card-title" >{{burgerIndex+1}}. {{burger.title}}</h4>
+      <div *ngFor="let element of burger.elements">
+        <img src="assets/images/{{element}}.png" style="height: 25px; width: 100px">
+      </div>
+      <img src="assets/images/bun-bottom.png" style="height: 25px; width: 100px">
+      <div class="card-text">
+        <div class="row">
+          Price: {{burger.price | currency}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
